@@ -185,7 +185,7 @@ while ($zonelinks = mysqli_fetch_array($resulttwo)) {
 $print_buffer .= "<br><br><p><b>Zone Experience Rate: <font color=" . $setcolor . ">+" . $zone["Bonus"] . "% " . $hotzone . "</b><font color=black>";
 $print_buffer .= "<br><p><b>Can Bind: "; 
 $print_buffer .= ($zone["canbind"] == 0 ? "<font color=red>No" : ($zone["canbind"] == 1 ? "<font color=CornflowerBlue>Self Only" : "<font color=green>Yes"));
-$print_buffer .= "<font color=black><p><b>Succor point : X (</b>" . floor($zone["safe_x"]) . ")  Y (" . floor($zone["safe_y"]) . ") Z (" . floor($zone["safe_z"]) . ")";
+$print_buffer .= "<font color=black><p><b>Succor Point (xyz):</b> " . floor($zone["safe_x"]) . ", " . floor($zone["safe_y"]) . ", " . floor($zone["safe_z"]) . "";
 
 $req = "";
 if ($zone["flag_needed"] != '') {

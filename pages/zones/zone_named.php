@@ -34,9 +34,10 @@ $query = "
 $result = db_mysql_query($query) or message_die('zones.php', 'MYSQL_QUERY', $query, mysqli_error());
 $zone = mysqli_fetch_array($result);
 $print_buffer .= "<table border=0 width=0%><tr valign=top><td>";
-$print_buffer .= "<p><b>Succor point : </b>" . floor($zone["safe_x"]) . " / " . floor($zone["safe_y"]) . " / " . floor($zone["safe_z"]);
+$print_buffer .= "<p><b>Succor Point (xyz):</b> " . floor($zone["safe_x"]) . ", " . floor($zone["safe_y"]) . ", " . floor($zone["safe_z"]);
+$print_buffer .= "<font color=black><p><b>Succor Point (xyz):</b> " . floor($zone["safe_x"]) . ", " . floor($zone["safe_y"]) . ", " . floor($zone["safe_z"]) . "";
 if ($zone["minium_level"] > 0) {
-    $print_buffer .= "<br><b>Minimum level : </b>" . floor($zone["minium_level"]);
+    $print_buffer .= "<br><b>Minimum Level: </b>" . floor($zone["minium_level"]);
 }
 $print_buffer .= "</td>";
 if (file_exists($maps_dir . $name . ".jpg")) {
